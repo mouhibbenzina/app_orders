@@ -264,3 +264,244 @@ textarea:focus { border-color: var(--primary); }
 
 /* History page search */
 .history-page .search-row { margin-top: 8px; }
+
+/* ===== LANDING PAGE ===== */
+#app.landing-mode { max-width: 100%; }
+
+.landing {
+  min-height: 100vh;
+  background: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.landing-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.landing-logo { font-size: 20px; font-weight: 700; color: var(--primary); }
+.landing-nav-links { display: flex; gap: 12px; }
+.landing-nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background .2s;
+  cursor: pointer;
+}
+.landing-nav-links a:hover { background: #f0f4ff; }
+.landing-nav-links a.landing-btn-primary {
+  background: var(--primary);
+  color: #fff;
+}
+.landing-nav-links a.landing-btn-primary:hover { opacity: .9; }
+
+.landing-hero {
+  text-align: center;
+  padding: 80px 24px 60px;
+  max-width: 800px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, #f0f7ff 0%, #fff 100%);
+}
+.landing-hero h1 { font-size: 42px; font-weight: 800; color: #111; line-height: 1.2; }
+.landing-hero h1 span { color: var(--primary); }
+.landing-hero p {
+  font-size: 18px;
+  color: var(--text-secondary);
+  margin: 20px 0 32px;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.landing-hero-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.landing-hero-btns a {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform .2s, box-shadow .2s;
+}
+.landing-hero-btns a:hover { transform: translateY(-2px); }
+.landing-hero-btn-primary {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(26,115,232,.35);
+}
+.landing-hero-btn-secondary {
+  background: #fff;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.landing-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 70px 24px;
+}
+.landing-section-title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.landing-section-sub {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 16px;
+  margin-bottom: 48px;
+}
+
+.landing-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+.landing-feature-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 28px 24px;
+  text-align: center;
+  transition: box-shadow .3s, transform .3s;
+}
+.landing-feature-card:hover {
+  box-shadow: 0 8px 30px rgba(0,0,0,.08);
+  transform: translateY(-4px);
+}
+.landing-feature-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  font-size: 24px;
+}
+.landing-feature-card h3 { font-size: 17px; margin-bottom: 8px; }
+.landing-feature-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+
+.landing-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  counter-reset: step;
+}
+.landing-step {
+  text-align: center;
+  padding: 24px;
+  position: relative;
+}
+.landing-step-num {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+.landing-step h3 { font-size: 16px; margin-bottom: 6px; }
+.landing-step p { font-size: 14px; color: var(--text-secondary); }
+
+.landing-roles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+.landing-role-card {
+  border-radius: 14px;
+  padding: 24px;
+  border: 1px solid var(--border);
+}
+.landing-role-card h3 { font-size: 16px; margin-bottom: 8px; }
+.landing-role-card ul { list-style: none; }
+.landing-role-card ul li {
+  font-size: 14px;
+  color: var(--text-secondary);
+  padding: 4px 0;
+  padding-left: 20px;
+  position: relative;
+}
+.landing-role-card ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.landing-cta {
+  text-align: center;
+  background: linear-gradient(135deg, var(--primary), #0d47a1);
+  border-radius: 20px;
+  padding: 60px 24px;
+  color: #fff;
+}
+.landing-cta h2 { font-size: 30px; margin-bottom: 12px; }
+.landing-cta p { font-size: 16px; opacity: .9; margin-bottom: 28px; }
+.landing-cta a {
+  display: inline-block;
+  padding: 14px 36px;
+  background: #fff;
+  color: var(--primary);
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform .2s;
+}
+.landing-cta a:hover { transform: translateY(-2px); }
+
+.landing-footer {
+  text-align: center;
+  padding: 32px 24px;
+  color: var(--text-secondary);
+  font-size: 13px;
+  border-top: 1px solid var(--border);
+}
+
+/* ===== REGISTER PAGE ===== */
+.register-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 32px 24px;
+  background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+}
+.register-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px 24px;
+  box-shadow: 0 8px 32px rgba(0,0,0,.2);
+}
+.register-card h1 { font-size: 24px; text-align: center; color: var(--primary); margin-bottom: 4px; }
+.register-card p { text-align: center; color: var(--text-secondary); font-size: 13px; margin-bottom: 24px; }
+.register-footer {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+.register-footer a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
